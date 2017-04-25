@@ -88,6 +88,9 @@ function createRequest(path, method, data, callback) {
 	http_client.end();
 }
 
+app.get('/', function(request, response){
+	response.send('Heyo。')
+})
 app.get(dir + '/login/cellphone', function(request, response) {
 	var phone = request.query.phone;
 	var cookie = request.get('Cookie') ? request.get('Cookie') : (request.query.cookie ? request.query.cookie : '');
