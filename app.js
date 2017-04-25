@@ -904,9 +904,11 @@ app.get(dir + '/toplist/artist', function(request, response) {
 	};
 	createWebAPIRequest('/weapi/toplist/artist', data, cookie, response)
 })
-var server = app.listen(3000, function() {
-	console.log("启动App");
-});
+
+module.exports = app
+// var server = app.listen(3000, function() {
+// 	console.log("启动App");
+// });
 
 function id2Url(pic_str) {
 	var magic = str2Arr('3go8&$8*3*3h0k(2)2')
